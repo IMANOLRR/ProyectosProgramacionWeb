@@ -52,6 +52,7 @@
                             <li><a class="dropdown-item" href="/Apis/conversiondemonedas.php">Conversion de monedas</a></li>
                             <li><a class="dropdown-item" href="/Apis/generadorimagenesIA.php">Generador de imagenes con IA</a></li>
                             <li><a class="dropdown-item" href="/Apis/datospais.php">Datos de un pais</a></li>
+                            <li><a class="dropdown-item" href="/Apis/generadorchistes.php">Generador de chistes</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -34,7 +34,7 @@ class plantilla{
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/tarea5/index.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.php">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="/acercade.php">Acerca de</a></li>
 
                     <li class="nav-item dropdown">
@@ -51,6 +51,7 @@ class plantilla{
                             <li><a class="dropdown-item" href="/Apis/conversiondemonedas.php">Conversion de monedas</a></li>
                             <li><a class="dropdown-item" href="/Apis/generadorimagenesIA.php">Generador de imagenes con IA</a></li>
                             <li><a class="dropdown-item" href="/Apis/datospais.php">Datos de un pais</a></li>
+                            <li><a class="dropdown-item" href="/Apis/generadorchistes.php">Generador de chistes</a></li>
                             
                         </ul>
                     </li>
