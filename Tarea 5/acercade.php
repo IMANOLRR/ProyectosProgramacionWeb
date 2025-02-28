@@ -49,6 +49,16 @@
     <div class="container mt-4">
         <!-- Aquí va el contenido de cada página -->
         <h1 class="text-center">Acerca de!!!</h1>
+        <h2>Framework que utilicé</h2>
+        <p>Para este portal web utilicé el Framework de Bootstrap por la sencilla razón de que:
+            <ul>
+                <li>Es fácil de usar</li>
+                <li>Es muy completo</li>
+                <li>Es muy personalizable</li>
+                <li>Es diferente al que usó el profesor en la explicacion</li>
+            </ul>
+        </p>
+        <p>Para más información sobre Bootstrap, puedes visitar su página oficial: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
     </div>
 
     <!-- JS de Bootstrap -->

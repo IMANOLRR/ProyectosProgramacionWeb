@@ -49,11 +49,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["nombre"])) {
 
 <div class="container mt-4">
         <!-- Aquí va el contenido de cada página -->
-        <h1 class="text-center">Prediccion de edad</h1>
+        <h1 class="text-center">Prediccion de género</h1>
 
             <body>
                     <div class="container mt-5">
-                        <h1>Predicción de Género</h1>
+                        <h2>Predicir Género</h2>
                         <form method="POST" action="">
                             <label for="nombre">Introduce un nombre:</label>
                             <input type="text" id="nombre" name="nombre" class="form-control" required>

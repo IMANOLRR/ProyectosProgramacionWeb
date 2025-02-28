@@ -53,6 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["nombre"])) {
     <h1 class="text-center">Predicción de Edad</h1>
 
     <form method="POST" action="">
+        <h2>Predecir edad</h2>
         <label for="nombre">Introduce un nombre:</label>
         <input type="text" id="nombre" name="nombre" class="form-control" required>
         <button type="submit" class="btn btn-primary mt-2">Predecir edad</button>

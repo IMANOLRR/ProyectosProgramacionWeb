@@ -75,6 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["ciudad"])) {
     <h1 class="text-center">Clima en República Dominicana</h1>
 
     <form method="POST" action="">
+        <h2>Buscar clima</h2>
         <label for="ciudad">Introduce el nombre de una ciudad:</label>
         <input type="text" id="ciudad" name="ciudad" class="form-control" required>
         <button type="submit" class="btn btn-primary mt-2">Buscar clima</button>

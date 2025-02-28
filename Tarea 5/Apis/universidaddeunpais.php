@@ -50,6 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["pais"])) {
     <h1 class="text-center">Universidades por País</h1>
 
     <form method="POST" action="">
+        <h2>Buscar universidades de un país</h2>
         <label for="pais">Introduce el nombre de un país en inglés:</label>
         <input type="text" id="pais" name="pais" class="form-control" required>
         <button type="submit" class="btn btn-primary mt-2">Buscar universidades</button>

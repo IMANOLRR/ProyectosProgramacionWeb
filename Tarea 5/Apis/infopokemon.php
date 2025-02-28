@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST["nombre"])) {
         <!-- Aquí va el contenido de cada página -->
         <h1 class="text-center">Informacion de un Pokémon</h1>
         <form method="POST" action="">
+            <h2>Buscar Pokémon</h2>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre del Pokémon:</label>
                 <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Ejemplo: Pikachu" required>
