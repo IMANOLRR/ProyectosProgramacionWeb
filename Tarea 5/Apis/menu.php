@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php 
+
+class plantilla{
+
+    static $instancia = null;
+    public static function aplicar(){
+        if(self::$instancia == null){
+            self::$instancia = new plantilla();
+        }    
+        return self ::$instancia;   
+    }
+
+    public function __construct(){
+        ?>
+        <!DOCTYPE html>
         <html lang = "en">
         <head>
         <meta charset = "UTF-8">
@@ -14,7 +28,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.php">Portal Web</a>
+            <a class="navbar-brand" href="/index.php">Portal Web</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,6 +52,7 @@
                             <li><a class="dropdown-item" href="/Apis/generadorimagenesIA.php">Generador de imagenes con IA</a></li>
                             <li><a class="dropdown-item" href="/Apis/datospais.php">Datos de un pais</a></li>
                             <li><a class="dropdown-item" href="/Apis/generadorchistes.php">Generador de chistes</a></li>
+                            
                         </ul>
                     </li>
                 </ul>
@@ -45,25 +60,7 @@
         </div>
     </nav>
         </body> 
-
-    <div class="container mt-4">
-        <!-- Aquí va el contenido de cada página -->
-        <h1 class="text-center">Acerca de!!!</h1>
-        <h2>Framework que utilicé</h2>
-        <p>Para este portal web utilicé el Framework de Bootstrap por la sencilla razón de que:
-            <ul>
-                <li>Es fácil de usar</li>
-                <li>Es muy completo</li>
-                <li>Es muy personalizable</li>
-                <li>Es diferente al que usó el profesor en la explicacion</li>
-            </ul>
-        </p>
-        <p>Para más información sobre Bootstrap, puedes visitar su página oficial: <a href="https://getbootstrap.com/">https://getbootstrap.com/</a></p>
-    </div>
-
-    <!-- JS de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <?php
+    }
+}
