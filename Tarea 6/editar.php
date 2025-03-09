@@ -35,11 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if ($consulta->execute()) {
-        echo "¡Personaje actualizado exitosamente!";
+        $mensaje = "¡Personaje actualizado exitosamente!";
     } else {
-        echo "Error al actualizar el personaje: " . $conexion->error;
+        $mensaje = "Error al actualizar el personaje: " . $conexion->error;
     }
 
     $conexion->close();
+
+     header("Location: index.php?mensaje=" . urlencode($mensaje));
+     exit();
 }
 ?>
