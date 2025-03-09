@@ -35,24 +35,24 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="acercade.php">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/acercade.php">Acerca de</a></li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="apiDropdown" role="button" data-bs-toggle="dropdown">
                             APIs
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="Apis\Prediccion de genero\predicciondegenero.php">Prediccion de genero</a></li>
-                            <li><a class="dropdown-item" href="Apis\Prediccion de edad\predicciondeedad.php">Prediccion de edad</a></li>
-                            <li><a class="dropdown-item" href="Apis\Universidad de un pais\universidaddeunpais.php">Universidad de un pais</a></li>
-                            <li><a class="dropdown-item" href="Apis\Clima en RD\climard.php">Clima en RD</a></li>
-                            <li><a class="dropdown-item" href="Apis\Informacion de un Pokemon\infopokemon.php">Informaciond de un Pokemon</a></li>
-                            <li><a class="dropdown-item" href="Apis\Noticias desde WordPress\noticiaswordpress.php">Noticias desde WordPress</a></li>
-                            <li><a class="dropdown-item" href="Apis\Conversion de monedas\conversionmonedas.php">Conversion de monedas</a></li>
-                            <li><a class="dropdown-item" href="Apis\Generador de imagenes con IA\generadordeimagenesIA.php">Generador de imagenes con IA</a></li>
-                            <li><a class="dropdown-item" href="Apis\Datos de un pais\datospais.php">Datos de un pais</a></li>
-                            <li><a class="dropdown-item" href="Apis\Generador de chistes\generadorchistes.php">Prediccion de edad</a></li>
+                            <li><a class="dropdown-item" href="/Apis/predicciondegenero.php">Prediccion de genero</a></li>
+                            <li><a class="dropdown-item" href="/Apis/predicciondeedad.php">Prediccion de edad</a></li>
+                            <li><a class="dropdown-item" href="/Apis/universidaddeunpais.php">Universidad de un pais</a></li>
+                            <li><a class="dropdown-item" href="/Apis/climard.php">Clima en RD</a></li>
+                            <li><a class="dropdown-item" href="/Apis/infopokemon.php">Informaciond de un Pokemon</a></li>
+                            <li><a class="dropdown-item" href="/Apis/noticiaswordpress.php">Noticias desde WordPress</a></li>
+                            <li><a class="dropdown-item" href="/Apis/conversiondemonedas.php">Conversion de monedas</a></li>
+                            <li><a class="dropdown-item" href="/Apis/generadorimagenesIA.php">Generador de imagenes con IA</a></li>
+                            <li><a class="dropdown-item" href="/Apis/datospais.php">Datos de un pais</a></li>
+                            <li><a class="dropdown-item" href="/Apis/generadorchistes.php">Generador de chistes</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -64,14 +64,13 @@
     <div class="container mt-4">
         <!-- Aquí va el contenido de cada página -->
         <h1 class="text-center">Bienvenido al Portal Web</h1>
+
+        <p>Imanol Rodriguez Rodriguez</p>
+    <img src="/Imgs/foto2x2.jpg" alt="Foto de Imanol Rodriguez Rodriguez" width="400" height="400">
     </div>
 
     <!-- JS de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <p>Imanol Rodriguez Rodriguez</p>
-    <img src="Imgs/foto2x2.jpg" alt="Foto de Imanol Rodriguez Rodriguez" width="400" height="400">
-
 
 </body>
 
