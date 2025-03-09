@@ -39,7 +39,7 @@ plantilla::aplicar();
                                         <td>{$row['color']}</td>
                                         <td>{$row['tipo']}</td>
                                         <td>{$row['nivel']}</td>
-                                        <td><img src='fotos/" . $row['foto'] . "' alt='Foto del Participante' width='100'></td>
+                                        <td><img src='/Libreria/fotos/{$row['foto']}' alt='Foto del Participante' width='100'></td>
                                     </tr>";
                             }
                         } else {
