@@ -2,6 +2,18 @@
 require 'Libreria/plantilla.php';
 plantilla::aplicar();
 
+$config = include('config.php');
+
+if (empty($config['host']) || empty($config['username']) || empty($config['database'])) {
+    header('Location: setup.php');
+    exit;
+}
+
+$conexion = new mysqli($config['host'], $config['username'], $config['password'], $config['database']);
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+}
+
 $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
 
 ?>
@@ -21,6 +33,7 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                             <th>Tipo</th>
                             <th>Nivel</th>
                             <th>Foto</th>
+                            <th>Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,7 +48,6 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
 
                         if ($resultado->num_rows > 0) {
                             while ($row = $resultado->fetch_assoc()) {
-                                
                                 echo "<tr>
                                         <td>{$row['id']}</td>
                                         <td>{$row['nombre']}</td>
@@ -43,16 +55,18 @@ $mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
                                         <td>{$row['tipo']}</td>
                                         <td>{$row['nivel']}</td>
                                         <td><img src='/Libreria/fotos/{$row['foto']}' alt='Foto del Participante' width='100'></td>
+                                        <td>
+                                            <a href='generar_pdf.php?id={$row['id']}' class='btn btn-primary btn-sm'>Descargar PDF</a>
+                                        </td>
                                     </tr>";
                             }
                         } else {
-                            echo "<tr><td colspan='6'>No hay personajes registrados</td></tr>";
+                            echo "<tr><td colspan='7'>No hay personajes registrados</td></tr>";
                         }
 
                         $conexion->close();
                         ?>
                     </tbody>
-
                 </table>
             </div>
 
