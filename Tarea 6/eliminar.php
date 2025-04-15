@@ -27,11 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $consulta->bind_param("i", $id);
 
     if ($consulta->execute()) {
-        echo "¡Personaje eliminado exitosamente!";
+        $mensaje = "¡Personaje eliminado exitosamente!";
     } else {
-        echo "Error al eliminar el personaje: " . $conexion->error;
+        $mensaje = "Error al eliminar el personaje: " . $conexion->error;
     }
 
     $conexion->close();
+    
+    header("Location: index.php?mensaje=" . urlencode($mensaje));
+     exit();
 }
 ?>

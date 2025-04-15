@@ -24,151 +24,123 @@ class plantilla{
             <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
 
             <style>
-
-                @font-face{
-                font-family: "Caslon Antique";
-                src: url ('Libreria/fonts/CaslonAntique.ttf') format('truetype');
-                font-weight: normal;
-                font-style: normal;
-                }
-
-                body{
+                body {
                     background-color: #FBEAC9;
-                }
-
-                .container{
-                    margin-top: 20px;
-                    h1, h2 {
-                        color: #2E2E2E;
-                        font-family: "Caslon Antique", serif;
-                    }
-
-                    table th{
-                        color: #2E2E2E;
-                    }
-                }
-
-                input[type="text"], 
-                input[type="number"], 
-                input[type="file"] {	
-                    background-color: #8B5A2B !important;
-                    color: #FFF;
-                    border: 2px solid #D4AF37; 
-                    border-radius: 8px; 
-                    padding: 10px;
-                    font-family: "Pirata One", system-ui;
-                    font-size: 16px;
-                    margin-bottom: 10px;
-                    width: 100%;
-                }
-
-                label[for="nombre"],
-                label[for="color"],
-                label[for="tipo"],
-                label[for="nivel"],
-                label[for="foto"] {
-                    color: #2E2E2E;
-                    font-family: "Pirata One", system-ui;
-                    font-size: 18px;
-                    margin-bottom: 5px;
-                    display: block;
-                }
-
-                .btn-primary {
-                background-color: #003366;
-                border-color: #003366;
-                color: #FFF;
-                font-family: "Pirata One", system-ui;
-                font-size: 16px;
-                padding: 10px 20px; 
-                border-radius: 8px; 
-                transition: all 0.3s ease;
-                margin-top: 15px;
-                }
-
-                .btn-primary:hover {
-                    background-color: #00509E;
-                    border-color: #00509E;
-                    color: #FFF;
-                    transform: scale(1.05);
-                }
-
-                form {
-                    border-radius: 10px;
-                    margin: 10px 0;
-                    padding: 20px;
-                    background-color: #F8F4E3;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                }
-
-                form input[type="text"], 
-                form input[type="number"], 
-                form input[type="file"] {
-                    max-width: 100%; 
-                }
-
-                .navbar {
-                    background-color: #D4AF37;
-                    font-family: "Pirata One", system-ui;
-                    font-size: 18px;
-                }
-
-                .navbar-brand {
-                    color: #00509E;
-                    font-size: 24px;
                     font-family: "Caslon Antique", serif;
                 }
 
-                .navbar-nav .nav-link {
-                    color: #00509E;
+                .container {
+                    margin-top: 20px;
+                }
+
+                h1, h2 {
+                    color: #2E2E2E;
+                    font-family: "Caslon Antique", serif;
+                }
+
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 20px;
+                    background-color: #F8F4E3;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+
+                table th, table td {
+                    text-align: center;
+                    padding: 10px;
+                    border: 1px solid #D4AF37;
+                }
+
+                table th {
+                    background-color: #D4AF37;
+                    color: #FFF;
                     font-family: "Pirata One", system-ui;
                     font-size: 18px;
                 }
 
-                .navbar-nav .nav-link:hover {
-                    color: #FFF;
+                table tbody tr:nth-child(even) {
+                    background-color: #FFF8E1;
+                }
+
+                table tbody tr:nth-child(odd) {
+                    background-color: #FDF5E6;
+                }
+
+                table tbody tr:hover {
+                    background-color: #FCE3A1;
+                    cursor: pointer;
+                }
+
+                .btn {
+                    font-family: "Pirata One", system-ui;
+                    font-size: 14px;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    transition: all 0.3s ease;
+                }
+
+                .btn-edit {
                     background-color: #00509E;
-                    border-radius: 8px;
+                    color: #FFF;
+                    border: none;
                 }
 
-                img {
-                position: absolute;
-                left: 1010px; /* Ajusta horizontalmente */
-                top: 140px; /* Ajusta verticalmente */
-                width: 500px;
-                height: 550px;
-                border-radius: 10px; /* Opcional: Bordes redondeados */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: Sombra */
+                .btn-edit:hover {
+                    background-color: #003366;
                 }
 
-
-                .image-container {
-                display: flex;
-                justify-content: flex-end; /* Imagen alineada a la derecha */
-                align-items: flex-start; /* Imagen alineada al principio del contenedor */
-                padding: 10px; /* Espaciado interno */
+                .btn-delete {
+                    background-color: #C70039;
+                    color: #FFF;
+                    border: none;
                 }
 
-                .image-container img {
-                    max-width: 500px;
-                    max-height: 550px;
-                    width: 100%;
-                    height: auto;
+                .btn-delete:hover {
+                    background-color: #900C3F;
+                }
+
+                .popup-message {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #FFF;
+                    border: 2px solid #D4AF37;
                     border-radius: 10px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    padding: 20px;
+                    text-align: center;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                    z-index: 1000;
+                    font-family: "Pirata One", system-ui;
+                    font-size: 18px;
                 }
 
-                .table img {
-                    position: static;
-                    max-width: 100px; /* Limita el ancho */
-                    max-height: 100px; /* Limita el alto */
-                    width: auto;
-                    height: auto;
-                    border-radius: 5px; /* Bordes ligeramente redondeados */
-                    box-shadow: none; /* Sin sombra para evitar conflictos visuales */
+                .popup-message.success {
+                    border-color: #28a745;
                 }
 
+                .popup-message.error {
+                    border-color: #dc3545;
+                }
+
+                .popup-message button {
+                    background-color: #00509E;
+                    color: #FFF;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+
+                .popup-message button:hover {
+                    background-color: #003366;
+                }
             </style>
+
 
             <nav class="navbar navbar-expand-lg" style="background-color: #D4AF37;">
                 <div class="container-fluid">

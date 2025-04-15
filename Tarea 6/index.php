@@ -1,6 +1,9 @@
 <?php
 require 'Libreria/plantilla.php';
 plantilla::aplicar();
+
+$mensaje = isset($_GET['mensaje']) ? $_GET['mensaje'] : '';
+
 ?>
 
 <body>
@@ -53,5 +56,33 @@ plantilla::aplicar();
                 </table>
             </div>
 
+        <?php if (!empty($mensaje)): ?>
+            <div class="modal fade" id="mensajeModal" tabindex="-1" aria-labelledby="mensajeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="mensajeModalLabel">Información</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <?php echo htmlspecialchars($mensaje); ?>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <?php endif; ?>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script>
+                <?php if (!empty($mensaje)): ?>
+                var modal = new bootstrap.Modal(document.getElementById('mensajeModal'));
+                modal.show();
+                <?php endif; ?>
+            </script>
+        </div>
 </body>
 </html>

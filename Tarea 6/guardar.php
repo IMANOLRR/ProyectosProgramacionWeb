@@ -18,12 +18,21 @@ if (move_uploaded_file($foto['tmp_name'], $ruta_destino)) {
 
     $stmt_personaje = $conexion->prepare("INSERT INTO personajes (nombre, color, tipo, nivel, foto) VALUES (?, ?, ?, ?, ?)");
     $stmt_personaje->bind_param("sssss", $nombre, $color, $tipo, $nivel, $nombre_archivo);
-    $stmt_personaje->execute();
 
+    if ($stmt_personaje->execute()) {
+        $mensaje = "¡Personaje agregado exitosamente!";
+    } else {
+        $mensaje = "Error al agregar el personaje: " . $conexion->error;
+    }
+
+    $stmt_personaje->close();
     $conexion->close();
 
-    echo "¡Personaje registrado exitosamente!";
+    header("Location: index.php?mensaje=" . urlencode($mensaje));
+    exit();
 } else {
-    echo "Error al subir la foto.";
+    $mensaje = "Error al guardar la foto en el servidor.";
+    header("Location: index.php?mensaje=" . urlencode($mensaje));
+    exit();
 }
 ?>
