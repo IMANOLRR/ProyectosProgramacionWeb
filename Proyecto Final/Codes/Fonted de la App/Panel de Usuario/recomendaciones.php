@@ -1,6 +1,5 @@
 <?php
-require 'menu.php';
-
+require '../menu.php';
 plantilla::aplicar();
 ?>
 
@@ -14,12 +13,8 @@ plantilla::aplicar();
 </head>
 <body>
     <header>
-        <h1>Prototipo App de Recomendaciones de Inversiones</h1>
-        <div class="navegacion">
-            <nav class="navegacion">
-                
-        </div>
+        <h1>Recomendaciones de Inversiones</h1>
     </header>
 
-    <h2>Este es el panel</h2>
+    <p>Aqui iran las recomendaciones</p>
 </body>

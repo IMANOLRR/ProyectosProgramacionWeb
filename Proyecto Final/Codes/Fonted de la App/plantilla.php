@@ -21,7 +21,7 @@ class plantilla {
         header {
             background-color: #004080;
             color: white;
-            padding: 10px 20px;
+            padding: 20px 20px;
             text-align: center;
         }
         nav {
@@ -75,8 +75,80 @@ class plantilla {
             color:rgb(255, 255, 255);
             text-decoration: none;
         }
-    </style>
+        
+      .menu-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      padding: 10px 20px;
+      color: #fff;
+      }
 
-        <?php
-    }
+        .menu-logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        }
+
+        .menu-bars {
+        cursor: pointer;
+        display: block;
+        }
+
+        .menu-bars div {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.3s;
+        }
+
+        .menu-items {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        border-radius: 8px;
+        display: none;
+        flex-direction: column;
+        padding: 10px 0;
+        z-index: 1000;
+        }
+
+        .menu-items a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 20px;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .menu-items a:hover {
+        background-color: #444;
+        }
+
+        .menu-items.active {
+        display: flex;
+        }
+        </style>
+
+        <body>
+        <script>
+            const links = document.querySelectorAll('nav a');
+            const sections = document.querySelectorAll('.container');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').replace('#', '');
+                    sections.forEach(section => {
+                        section.style.display = section.id === targetId ? 'block' : 'none';
+                    });
+                });
+            });
+        </script>
+        </body>
+            <?php
+        }
+    
 }

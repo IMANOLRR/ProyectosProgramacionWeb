@@ -13,9 +13,10 @@ plantilla::aplicar();
 <body>
     <header>
         <h1>Iniciar Sesion</h1>
-        <form action="#">Iniciar Sesion</form>
+        <form action="#"></form>
         <input type="text" placeholder="Usuario" required>
         <input type="password" placeholder="Contraseña" required>
+        <br>
         <button type="submit">Iniciar Sesion</button>
         <p>No tienes cueta? <a href="singin.php">Registrarse aquí</a></p>
         <p><a href="index.php">Volver al Inicio</a></p>
